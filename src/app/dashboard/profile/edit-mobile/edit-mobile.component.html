@@ -1,0 +1,33 @@
+<div class="list_header col-md-12">
+    <span class="col-md-1" style="float:left" (click)="back()"><i  style="color:black; font-size:1.5em;" class="fa fa-arrow-left" aria-hidden="true"></i></span>
+    <span class="col-md-11">
+       
+        <span class="" style="  color: #90d600; font-size: 21px;font-weight: initial;">Beayou.in</span>
+    </span>
+</div>
+<div class="col-md-4 col-md-offset-4" style="padding:4%">
+
+    <form novalidate [formGroup]="myForm" (submit)="auth_user()">
+
+
+        <div class="login_name">
+            <mat-form-field style="width:100%;" class="example-full-width">
+                <span matPrefix>+91 &nbsp;</span>
+                <input formControlName="user_number" maxlength="10" matInput type="tel" placeholder="Mobile Number" required id="InputLoginPassword">
+
+            </mat-form-field>
+
+            <div *ngIf="myForm.controls['user_number'].errors &&  (myForm.controls['user_number'].dirty || myForm.controls['user_number'].touched)">
+
+                <div class="error_color" *ngIf="myForm.controls['user_number'].errors.required">
+                    Mobile Number is required.
+                </div>
+            </div>
+
+        </div>
+        <div class="login_submit" style="text-align:center; padding-top:20%">
+            <!-- <button type="submit" class="btn btn-primary register_btn" [disabled]="!myForm.valid">Submit</button> -->
+            <button type="submit" class="btn btn-primary register_btn" [disabled]="!myForm.valid">Submit</button>
+        </div>
+    </form>
+</div>

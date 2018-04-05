@@ -1,0 +1,55 @@
+<div class="list_header col-md-12">
+    <span class="col-md-1" style="float:left" (click)="back()"><i  style="color:black; font-size:1.5em;" class="fa fa-arrow-left" aria-hidden="true"></i></span>
+    <span class="col-md-11">
+       
+        <span class="" style="  color: #90d600; font-size: 21px;font-weight: initial;">Beayou.in</span>
+    </span>
+</div>
+<div class="col-md-8 col-md-offset-2" style="padding:4%">
+
+    <form novalidate [formGroup]="myForm" (submit)="auth_user()">
+
+        <div class="login_name">
+
+            <p>Upload your video to YouTube.com then add it to your profile.</p>
+            <ol class="txt-small">
+                <li>Upload your video to <a href="http://www.youtube.com/my_videos_upload" target="_blank">YouTube</a></li>
+                <li>Go to the video in your browser</li>
+                <li>Copy the web address from the address bar<br>e.g. <a href="https://www.youtube.com/watch?v=FFMgffPj9pM" target="_blank" class="txt-black">https://www.youtube.com/watch?v=FFMgffPj9pM</a></li>
+                <li>Paste the video's web address below:</li>
+            </ol>
+        </div>
+        <div class="login_name">
+            <mat-form-field style="width:100%; font-size:20px;" class="example-full-width">
+                <input formControlName="video_url" matInput type="text" placeholder="Web address of video" required id="InputLoginPassword">
+            </mat-form-field>
+
+            <div *ngIf="myForm.controls['video_url'].errors &&  (myForm.controls['video_url'].dirty || myForm.controls['video_url'].touched)">
+
+                <div class="error_color" *ngIf="myForm.controls['video_url'].errors.required">
+                    Youtube Vidoe URL is required.
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="login_name">
+            <mat-form-field style="width:100%;" class="example-full-width">
+                <span matPrefix>+91 &nbsp;</span>
+                <input formControlName="user_number" matInput type="tel" placeholder="Mobile Number" required id="InputLoginPassword">
+
+            </mat-form-field>
+
+            <div *ngIf="myForm.controls['user_number'].errors &&  (myForm.controls['user_number'].dirty || myForm.controls['user_number'].touched)">
+
+                <div class="error_color" *ngIf="myForm.controls['user_number'].errors.required">
+                    Mobile Number is required.
+                </div>
+            </div>
+
+        </div> -->
+        <div class="login_submit" style="text-align:center; padding-top:3%">
+            <!-- <button type="submit" class="btn btn-primary register_btn" [disabled]="!myForm.valid">Submit</button> -->
+            <button type="submit" class="btn btn-primary register_btn" [disabled]="!myForm.valid">Submit</button>
+        </div>
+    </form>
+</div>

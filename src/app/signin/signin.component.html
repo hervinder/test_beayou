@@ -1,0 +1,114 @@
+<app-yoo-header></app-yoo-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" style="">
+
+            <form novalidate [formGroup]="myForm" (submit)="auth_user()">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+
+                    <div class="login_outer">
+                        <div class="login_inner">
+                            <div class="login_title">
+                                <label for="">Login</label>
+                            </div>
+
+                            <div class="sign_member">
+                                <div>
+                                    <label for="">SignIn As</label>
+                                </div>
+                                <div class="">
+                                    <span class="radio-inline" *ngFor="let user of members">
+                    <label style="color: #737373;">
+                      <input type="radio" [value]="user.code" formControlName="member" >{{user.name}}</label>
+                  </span>
+                                </div>
+
+                            </div>
+                            <div class="login_userid">
+                                <!-- <label for="InputFirstName">Email Address</label>
+                                <input type="text" class="form-control" [(ngModel)]="model.user_email" id="InputLoginEmail" name="loginEmail" placeholder="Email Address"> -->
+                                <mat-form-field style="width:100%;" class="example-full-width">
+                                    <input matInput placeholder="Email Address" required formControlName="user_email" id="InputLoginEmail">
+                                </mat-form-field>
+                                <div *ngIf="myForm.controls['user_email'].errors &&  (myForm.controls['user_email'].dirty || myForm.controls['user_email'].touched)">
+
+                                    <div class="error_color" *ngIf="myForm.controls['user_email'].errors.required">
+                                        Email is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="login_password">
+                                <!-- <label for="InputFirstName">Password</label>
+                                <input type="password" class="form-control" [(ngModel)]="model.user_password" id="InputLoginPassword" name="loginPassword" placeholder="Password"> -->
+                                <mat-form-field style="width:100%;" class="example-full-width">
+                                    <input formControlName="user_password" matInput type="password" placeholder="Password" required id="InputLoginPassword">
+
+
+
+                                </mat-form-field>
+
+                                <div *ngIf="myForm.controls['user_password'].errors &&  (myForm.controls['user_password'].dirty || myForm.controls['user_password'].touched)">
+
+                                    <div class="error_color" *ngIf="myForm.controls['user_password'].errors.required">
+                                        Password is required.
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+                            <div class="login_checkbox">
+                                <span>
+                  <span>
+                    <input type="checkbox" name="" value="">
+                  </span>
+                                <span>
+                    <label style="    color: #737373;">Keep me signed in</label>
+                  </span>
+                                </span>
+                                <span style="float: right;">
+                  <a href="">Forgot Password</a>
+                </span>
+                            </div>
+                            <div class="error" *ngIf='error_flag'>
+                                <span for="">{{error_msg}}</span>
+                            </div>
+                            <div class="login_submit">
+                                <!-- <button type="submit" class="btn btn-primary register_btn" [disabled]="!myForm.valid">Submit</button> -->
+                                <button type="submit" class="btn btn-primary register_btn" [disabled]="!myForm.valid">Submit</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                </div>
+
+            </form>
+
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-4">
+
+            </div>
+
+            <div class="col-md-4 login_bottom_title">
+                <span>
+          <label>Not a member?</label>
+          <a [routerLink]="['/signup']">Join for Free</a>
+        </span>
+            </div>
+
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+.member-container {
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.reg-picker__option {
+    display: inline-block;
+    width: 134px;
+    background-color: rgba(218, 218, 218, 0.9);
+    font-size: 1.5rem;
+    line-height: 100%;
+    color: #666;
+    margin: .25rem;
+    padding: 1.5rem 1rem;
+    border: none;
+    transition: -webkit-transform .1s ease;
+    transition: transform .1s ease;
+    transition: transform .1s ease, -webkit-transform .1s ease;
+}
+
+.reg-picker__option:hover {
+    color: #666;
+    border: none;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}

@@ -1,0 +1,23 @@
+<app-yoo-header></app-yoo-header>
+<div class="col-md-12" style="padding-top:5%">
+    <div *ngIf="no_records">
+        <div style="text-align:center">
+            <h1> NO Records Founds
+            </h1>
+        </div>
+    </div>
+    <div *ngFor="let cards of listingsObj" (click)="list(cards)" class="outer col-md-6 col-md-offset-1">
+        <div class="inner">
+            <div class="title">
+                <label for="">{{cards.institute_name}}</label>
+            </div>
+            <div class="details">
+                {{cards.other_details | slice:0:300}}...
+            </div>
+            <div style="padding-top:15px; color: #524f4f;">
+                <span style="margin-right:5px;"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                <span style="">{{getstate(cards.state)}}</span>
+            </div>
+        </div>
+    </div>
+</div>

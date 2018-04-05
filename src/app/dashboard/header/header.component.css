@@ -1,0 +1,24 @@
+.header_top {
+    height: 60px;
+    line-height: 64px;
+    font-size: 16px;
+    background-color: #000000;
+    color: #FFFFFf;
+    white-space: nowrap;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.dropdown {
+    margin: 7.5px 0px;
+}
+
+.dropdown>li>a {
+    font-size: 13px;
+    /* color: #e0dfdf; */
+    border-radius: 36px;
+    border: 2px solid #777575;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: #949494;
+}

@@ -1,0 +1,22 @@
+<div class="list_header col-md-12">
+    <span class="col-md-1" style="float:left" (click)="back()"><i  style="color:black; font-size:1.5em;" class="fa fa-arrow-left" aria-hidden="true"></i></span>
+    <span class="col-md-11">
+       
+        <span class="" style="  color: #90d600; font-size: 21px;font-weight: initial;">Beayou.in</span>
+    </span>
+</div>
+<div class="col-md-12">
+    <div style="text-align:center" class="col-md-12 uploadImage">
+        <span>{{fileName}}</span>
+        <p>{{size}}{{unit}}</p>
+    </div>
+    <div class="col-md-12 box fileContainer">
+        <input type="file" #fileUpload id="selectedFile" name="selectedFile" (change)="fileread($event);" multiple />
+        <span><b>Drag and Drop files here or<span style="color:red"> Browse</span></b>
+        </span>
+
+    </div>
+    <div>
+        <button type="button" (click)="uploadReadfile($event)" [disabled]='isSubmitDisabled'>Upload</button>
+    </div>
+</div>

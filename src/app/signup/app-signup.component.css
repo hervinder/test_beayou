@@ -1,0 +1,44 @@
+.outer-border {
+    margin-top: 2%;
+    border: 1px solid #ddd;
+    padding: 3%;
+    margin-bottom: 5%;
+    background: #ffffff;
+}
+
+.inner_border {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.inner_border label {
+    color: #90d600;
+}
+
+.register_label {
+    margin-top: 2%;
+}
+
+.register_label h1 {
+    font-size: 3.1em;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin-bottom: 1.5%;
+}
+
+.register_btn {
+    background-color: #90d600;
+    border-color: #90d600;
+    font-size: 20px;
+}
+
+.header_top {
+    height: 60px;
+    line-height: 64px;
+    font-size: 16px;
+    background-color: #000000;
+    color: #FFFFFf;
+    white-space: nowrap;
+    font-weight: 700;
+    text-decoration: none;
+}

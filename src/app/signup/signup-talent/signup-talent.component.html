@@ -1,0 +1,135 @@
+<div class="row" style="margin-left: 0px; margin-right: 0px;">
+    <div class="col-md-12 hidden-sm hidden-xs header_top">
+        <div class="">
+            <span class="" [routerLink]="['/']" style="  color: #90d600; font-size: 21px;font-weight: initial;">Beayou.in</span>
+
+
+        </div>
+
+    </div>
+</div>
+<div class="container" style="">
+    <div class="row">
+        <div class="col-md-12 register_label">
+            <h1>Register free to find Work</h1>
+        </div>
+        <div class="col-md-12">
+            <h6 style="margin-top: 0">Already a member? <a>Sign In</a></h6>
+        </div>
+    </div>
+
+
+    <div class="contianer outer-border">
+        <div class="row">
+            <!--<div class="col-md-12">
+        <label>Register Free</label>
+    </div>-->
+            <div class="col-md-12">
+                <form (submit)="addTalent()">
+                    <div class="row form-group inner_border">
+                        <div class="col-md-12">
+
+                            <h3><b>What are your interests?</b></h3>
+                            <!--<small id="emailHelp" class="form-text text-muted">We use this to match you with relevant auditions & jobs.</small>-->
+
+                            <div class="col-md-4" *ngFor="let item of data" style="padding: 15px;">
+                                <input type="checkbox" [value]="item.code" (change)="updateCheckedOptions(item.code,$event)">
+                                <label>{{item.name}}</label>
+
+
+                            </div>
+                            <!--<div class="col-md-4" style="padding: 15px;"><input type="checkbox" value="">Extras</div>
+                            <div class="col-md-4" style="padding: 15px;"><input type="checkbox" value="">Modeling</div>
+                            <div class="col-md-4" style="padding: 15px;"><input type="checkbox" value="">Musician</div>
+                            <div class="col-md-4" style="padding: 15px;"><input type="checkbox" value="">Photography</div>
+                            <div class="col-md-4" style="padding: 15px;"><input type="checkbox" value="">TV & Reality</div>
+                            <div class="col-md-4" style="padding: 15px;"><input type="checkbox" value="">Dancing</div>
+                            <div class="col-md-4" style="padding: 15px;"><input type="checkbox" value="">Film & Stage Crew</div>
+                            <div class="col-md-4" style="padding: 15px;"><input type="checkbox" value="">Stylist</div>
+                            <div class="col-md-4" style="padding: 15px;"><input type="checkbox" value="">Magazine</div>
+                            <div class="col-md-4" style="padding: 15px;"><input type="checkbox" value="">General Jobs</div>-->
+
+
+
+                        </div>
+
+                    </div>
+                    <div class="row form-group inner_border">
+
+                        <div class="col-md-8">
+                            <h3><b>Enter your details</b></h3>
+                            <label for="InputFirstName">First Name</label>
+                            <input type="text" [(ngModel)]="model.firstName" class="form-control" id="InputFirstName" name="firstName" placeholder="First Name">
+                        </div>
+
+                    </div>
+                    <div class="row form-group inner_border">
+                        <div class="col-md-8">
+
+                            <label for="InputLastName">Last Name</label>
+                            <input type="text" [(ngModel)]="model.lastName" class="form-control" id="InputLastName" name="lastName" placeholder="Last Name">
+
+                        </div>
+
+                    </div>
+                    <div class="row form-group inner_border">
+                        <div class="col-md-8">
+                            <label for="InputGender">Gender</label>
+                            <div>
+                                <span class="radio-inline"><input type="radio" [(ngModel)]="model.gender" value="M" name="optradio">Male</span>
+                                <span class="radio-inline"><input type="radio" [(ngModel)]="model.gender" value="F" name="optradio">Female</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- <div class="row form-group inner_border">
+                        <div class="col-md-8">
+                            <label for="InputPassword1">Birth date</label>
+                           <span></span>
+                        </div>
+
+                    </div> -->
+                    <div class="row form-group inner_border">
+                        <div class="col-md-8">
+                            <label for="Select_State">Select State</label>
+                            <select name="state" [(ngModel)]="model.state" class="form-control" id="Select_State">
+                         <option>Haryana</option>
+                         <option>Delhi</option>
+                         <option>Punjab</option>
+                         <option>Himachal</option>
+                         <option>Jammu & Kashmir</option>
+                     </select>
+                        </div>
+                    </div>
+                    <div class="row form-group inner_border">
+                        <div class="col-md-8">
+                            <label for="InputEmail1">Email address</label>
+                            <input type="email" [(ngModel)]="model.email" class="form-control" id="InputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+
+                    </div>
+                    <div class="row form-group inner_border">
+                        <div class="col-md-8">
+                            <label for="InputPassword1">Password</label>
+                            <input type="password" [(ngModel)]="model.password" class="form-control" id="InputPassword1" name="password" placeholder="Password">
+                        </div>
+
+                    </div>
+
+
+                    <div class="row form-group ">
+                        <div class="col-md-4">
+
+                        </div>
+                        <div class="col-md-4" style="text-align: center;">
+                            <button type="submit" class="btn btn-primary register_btn">Submit</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

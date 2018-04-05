@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face {
+    font-family: 'Light';
+    src: url('./assets/fonts/WorkSans-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Medium';
+    src: url('./assets/fonts/WorkSans-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'SemiBold';
+    src: url('./assets/fonts/WorkSans-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-Regular';
+    src: url('./assets/fonts/Nunito-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-Light';
+    src: url('./assets/fonts/Nunito-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-SemiBold';
+    src: url('./assets/fonts/Nunito-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'OCRAStd';
+    src: url('./assets/fonts/OCRAStd.ttf');
+}
+
+html,
+body {
+    font-family: Nunito-Regular !important;
+}
+
+.list_header {
+    height: 60px;
+    line-height: 64px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #FFFFFf;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.error_color {
+    color: red;
+}
+
+.register_btn {
+    background-color: #90d600;
+    border-color: #90d600;
+    font-size: 20px;
+}

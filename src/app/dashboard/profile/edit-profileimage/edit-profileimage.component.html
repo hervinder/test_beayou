@@ -1,0 +1,35 @@
+<div class="list_header col-md-12">
+    <span class="col-md-1" style="float:left" (click)="back()"><i  style="color:black; font-size:1.5em;" class="fa fa-arrow-left" aria-hidden="true"></i></span>
+    <span class="col-md-11">
+       
+        <span class="" style="  color: #90d600; font-size: 21px;font-weight: initial;">Beayou.in</span>
+    </span>
+</div>
+<div>
+    <div class="col-md-12">
+        <div class="col-md-6 ">
+
+            <!-- <span><button (click)="filesave(data1.image)">Save</button></span> -->
+            <img-cropper [image]="data1" [settings]="cropperSettings1" (onCrop)="cropped($event)"></img-cropper>
+
+
+
+        </div>
+        <div class="col-md-6">
+            <span class="result" *ngIf="data1.image">
+            <img [src]="data1.image" id="selectedFile" #selectedFile (change)="fileread($event);" [width]="cropperSettings1.croppedWidth" [height]="cropperSettings1.croppedHeight">
+          </span>
+            <!-- <div *ngIf="hide">
+            helklo <img [src]="upload_image.image">
+        </div> -->
+
+            <!-- <button (click)="fetchImage()"> fetch image</button> -->
+
+        </div>
+    </div>
+    <div class="col-md-12" style="text-align:center; padding-top:8%">
+
+        <button type="submit" class="btn btn-primary register_btn" (click)="filesave(data1.image)">Save</button>
+    </div>
+
+</div>

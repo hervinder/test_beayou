@@ -1,0 +1,93 @@
+<div class="row" style="margin-left: 0px; margin-right: 0px;">
+
+    <div class="col-md-12 hidden-sm hidden-xs header_top">
+        <div class="">
+            <span class="" [routerLink]="['/dashboard']" style="  color: #90d600; font-size: 21px;font-weight: initial;">Beayou.in</span>
+            <span style="    padding-left: 10%;"> 
+                  <span class=" header-content" style="    padding-right: 5%;">Auditions & Jobs </span>
+            <span class="header-content" style="    padding-right: 5%;">Talent Directory</span>
+            <span class=" header-content">Discover</span>
+            </span>
+            <span style="    float: right;  ">
+              <span style="    margin-right: 30px;"><button type="button" [routerLink]="['/dashboard/listTraining']" class="btn btn-default">List a Training</button></span>
+            <ul class="dropdown nav navbar-nav navbar-right">
+                <li class="dropdown" rbDropdown>
+                    <a class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">{{firstName}}<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a [routerLink]="['profile']">My Profile</a></li>
+                        <li><a (click)="onRetrieve()">Notification</a></li>
+                        <li><a (click)="onRetrieve()">My Listing</a></li>
+                        <li><a (click)="onRetrieve()">Setting</a></li>
+                        <li><a (click)="onSignout()">Sign out</a></li>
+                    </ul>
+                </li>
+            </ul>
+            </span>
+
+        </div>
+
+    </div>
+    <div class="col-sm-12 hidden-md hidden-lg hidden-xs header_top" style="font-size: 16px;">
+        <div class="">
+            <span class="" [routerLink]="['/']" style="  color: #90d600; font-size: 17px;font-weight: initial;">Beayou.in</span>
+            <span style="    padding-left: 5%;"> 
+                  <span class=" header-content" style="    padding-right: 2%;">Auditions & Jobs </span>
+            <span class="header-content" style="    padding-right: 2%;">Talent Directory</span>
+            <span class=" header-content">Discover</span>
+            </span>
+            <span style="    float: right;  ">
+              <span><button type="button" class="btn btn-default">List a Job</button></span>
+            <span><a class="btn btn-default" [routerLink]="['../signup']">Join Free</a></span>
+            <span><a class="btn btn-success" [routerLink]="['../signin']" style="     border-color: #90d600;   background-color: #90d600;">Sign in</a></span>
+            </span>
+
+        </div>
+
+    </div>
+    <div class="col-xs-12 hidden-sm hidden-lg  hidden-md  header_top" style="font-size: 16px; height: 125px;">
+        <div class="">
+            <span class="" [routerLink]="['/']" style="  color: #90d600; font-size: 17px;font-weight: initial;">Beayou.in</span>
+
+            <span style=" float: right  ">
+               
+            <!-- <ul class="dropdown nav navbar-nav navbar-right">
+                <li class="dropdown" rbDropdown>
+                    <a class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">{{firstName}}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a [routerLink]="['profile']">My Profile</a></li>
+                <li><a (click)="onRetrieve()">Notification</a></li>
+                <li><a (click)="onRetrieve()">My Listing</a></li>
+                <li><a (click)="onRetrieve()">Setting</a></li>
+                <li><a (click)="onSignout()">Sign out</a></li>
+            </ul>
+            </li>
+            </ul> -->
+
+            <button style="    background-color: black; border-color: black;" [matMenuTriggerFor]="menu">
+                <i style="font-size:24px" class="fa">&#xf039;</i>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                 
+                  <span><a [routerLink]="['profile']">My Profile</a></span>
+                </button>
+                <button mat-menu-item disabled>
+                  
+                  <span><a (click)="onSignout()">Sign out</a></span>
+                </button>
+
+            </mat-menu>
+            </span>
+            <span style="  float:right;  margin-right: 30px;"><button type="button" [routerLink]="['/dashboard/listTraining']" class="btn btn-default">List a Training</button></span>
+        </div>
+        <div style="  text-align: center;">
+            <span class=" header-content" style="      font-size: 13px;  padding-right: 2%;">Auditions & Jobs </span>
+            <span class="header-content" style="     font-size: 13px;   padding-right: 2%;">Talent Directory</span>
+            <span class=" header-content" style="    font-size: 13px;">Discover</span>
+        </div>
+
+
+
+    </div>
+
+</div>

@@ -1,0 +1,45 @@
+<!--  Toast Box -->
+<div class="dmToastAnimated dmToast" *ngIf="dialogueCtrls.isShown && dialogueCtrls.type.toLowerCase() == 'toast'" [ngClass]="dialogueCtrls.isShown?'fadeInUp':'fadeOut'" [ngStyle]="dialogueColor[dialogueCtrls.messageType]" (mouseleave)="toastStartTimeout()"
+    (mouseover)="toastleaveTimeout">
+    <div class="dmDialogueToastIcon" [ngStyle]="dialogueColorIcon[dialogueCtrls.messageType]">
+        <i class="fa fa-exclamation-circle" aria-hidden="true" *ngIf="dialogueCtrls.messageType == 'error' ? true: false"></i>
+        <i class="fa fa-check" aria-hidden="true" *ngIf="dialogueCtrls.messageType == 'success' ? true: false"></i>
+        <i class="fa fa-exclamation-triangle" aria-hidden="true" *ngIf="dialogueCtrls.messageType == 'warning' ? true: false"></i>
+    </div>
+    <div class="dmToastMessage">
+        {{dialogueCtrls.message}}
+    </div>
+    <div class="dmTransition dmToastClose" (click)="actionClick(0)">
+        <span>&#9932;</span>
+    </div>
+</div>
+<!--  Alert and Confirm Box -->
+<div class="dmAnimated dmDialogueContainer" *ngIf="(dialogueCtrls.isShown && dialogueCtrls.type.toLowerCase() == 'alert') || (dialogueCtrls.isShown && dialogueCtrls.type.toLowerCase() == 'confirm')" [ngClass]="dialogueCtrls.isShown?'fadeInUp':'fadeOut'"
+    (mouseover)="toastleaveTimeout">
+    <div class="dmDialogue1 dmAnimated" [ngClass]="dialogueCtrls.isShown?'scaleIn':'scaleOut'">
+        <div class="dmDialogueHeader">
+
+            <div class="dmDialogueClose" (click)="actionClick(0)">
+                <span class="dmTransition">
+                    &#9932;
+                  
+                </span>
+            </div>
+        </div>
+        <div class="dmDialogueBody">
+            <div>
+                <!-- <i class="fa fa-check-circle-o  " aria-hidden="true"></i> -->
+                <img *ngIf="dialogueCtrls.messageType == 'success' ? true: false" src="./../../assets/success_app_screen.png" width="25%" alt="" srcset="">
+                <img *ngIf="dialogueCtrls.messageType == 'error' ? true: false" src="./../../assets/error1.png" width="15%" alt="" srcset="">
+                <i *ngIf="dialogueCtrls.messageType == 'warning' ? true: false" style="color:#e65811; font-size:50px;" class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            </div>
+            <div class="dmDialogTitleBody">
+                <span class="dmDialogTitleHeading">{{dialogueCtrls.title}}</span>
+                <span class="dmDialogTitleSection">{{dialogueCtrls.message}}</span>
+            </div>
+        </div>
+        <div class="dmDialogueActions">
+            <button *ngFor="let ctrl of dialogueCtrls.actionLabel ; let i = index " [ngStyle]="dialogueColorAlert[dialogueCtrls.messageType]" (click)="actionClick(i)" ng-focus="dialogueCtrls.isShown && $index==0">{{ctrl}}</button>
+        </div>
+    </div>
+</div>

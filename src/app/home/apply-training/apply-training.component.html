@@ -1,0 +1,88 @@
+<!-- <router-outlet>
+</router-outlet> -->
+<div class="list_header col-md-12">
+    <div>
+        <span class="" style="  color: #90d600; font-size: 21px;font-weight: initial;">Beayou.in</span>
+    </div>
+</div>
+<div class="col-md-8 col-md-offset-2">
+
+
+    <form [formGroup]="firstFormGroup" style="text-align:center;">
+
+        <div class="col-md-12 ">
+            <div class="col-md-12 text-center" style="padding-bottom:2%">
+                <h1 class="txt-center list_job">List an Training - free</h1>
+
+            </div>
+            <div class="col-md-6 col-md-offset-3 pad0" style="text-align:left;">
+                <span>Gender</span>
+                <span class="radio-inline">
+                 <label style="color: #737373;">
+                <input type="radio" value="male" formControlName="member" >Male</label>
+                
+                     </span>
+                <span class="radio-inline">
+                      <label style="color: #737373;">
+                     <input type="radio" value="female" formControlName="member" >Female</label>
+                     
+                          </span>
+            </div>
+            <div class="col-md-6 col-md-offset-3 pad0">
+                <mat-form-field style="width:100%">
+                    <input matInput placeholder="Email" formControlName="emailCtrl" required>
+                </mat-form-field>
+                <div *ngIf="firstFormGroup.controls['emailCtrl'].errors &&  (firstFormGroup.controls['emailCtrl'].dirty || firstFormGroup.controls['emailCtrl'].touched)">
+
+                    <div style="text-align:left;" class="error_color" *ngIf="firstFormGroup.controls['emailCtrl'].errors.required">
+                        Email ID is required.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-offset-3 pad0">
+                <mat-form-field style="width:100%">
+                    <input matInput placeholder="Contact NO" maxlength="10" formControlName="numberCtrl" required>
+                </mat-form-field>
+                <div *ngIf="firstFormGroup.controls['numberCtrl'].errors &&  (firstFormGroup.controls['numberCtrl'].dirty || firstFormGroup.controls['numberCtrl'].touched)">
+
+                    <div style="text-align:left;" class="error_color" *ngIf="firstFormGroup.controls['numberCtrl'].errors.required">
+                        Phone Number is required.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-offset-3 pad0">
+                <mat-form-field style="width:100%;">
+                    <input matInput [matDatepicker]="picker" formControlName="date" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+
+
+
+
+
+
+
+        </div>
+        <div style="
+      padding-bottom: 5%;">
+            <button type="submit" (click)="submit()" class="btn btn-primary register_btn" [disabled]="!firstFormGroup.valid">Submit</button>
+
+        </div>
+    </form>
+    <!-- 
+  <form [formGroup]="secondFormGroup">
+
+      <mat-form-field>
+          <input matInput placeholder="Address" formControlName="secondCtrl" required>
+      </mat-form-field>
+      <div>
+          <button mat-button>Back</button>
+          <button mat-button>Next</button>
+      </div>
+  </form> -->
+
+
+
+</div>

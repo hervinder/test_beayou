@@ -1,0 +1,62 @@
+.profile_pic {
+    /* position: absolute; */
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+}
+
+.center-content {
+    /* margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.profile__phone__caption {
+    padding-top: 15px;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 992px) {
+    .profile_headers_detais {
+        text-align: center;
+    }
+}
+
+.box_container {
+    padding: 1.2%;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: height .5s ease;
+    transition: height .5s ease;
+}
+
+.box_container_upper {
+    text-align: center;
+    padding: 1.2%;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: height .5s ease;
+    transition: height .5s ease;
+    border-right: none;
+    border-left: none;
+}
+
+.label-style {
+    font-weight: 600;
+    display: inline-block;
+    color: #585858;
+    font-size: 18px;
+}
+
+.label-style label {
+    cursor: pointer;
+}

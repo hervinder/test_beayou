@@ -1,0 +1,92 @@
+.background_image {
+    color: #fff;
+    background: url(../../../assets/entertainment.png);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 127, 0, .72)), color-stop(50%, rgba(243, 33, 121, .72)), to(rgba(167, 67, 255, .72))), url(../../../assets/entertainment.png);
+    background: linear-gradient(to right, rgba(255, 127, 0, .72), rgba(243, 33, 121, .72) 50%, rgba(167, 67, 255, .72)), url(../../../assets/entertainment.png);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+
+.logo_img {
+    text-align: center;
+    padding-top: 10%;
+}
+
+.logo_img h2 {
+    font-size: 59px;
+    color: #70c92f;
+    font-weight: 700;
+    font-family: monospace;
+    text-transform: uppercase;
+    line-height: 4rem;
+}
+
+.logo_img h3 {
+    font-family: "Open Sans Condensed", Calibri, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.9rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+}
+
+.logo_img .audition_select select {
+    color: black;
+    height: 46px;
+    border-radius: 3px;
+    font-size: 1.8rem;
+    padding: 0 1rem 0 .5rem;
+    margin-bottom: .5rem;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .05);
+    min-width: 140px;
+    border: 1px solid #e5e5e5;
+}
+
+.logo_img .audition_select {
+    padding: 3px;
+}
+
+.register_btn {
+    background-color: #90d600;
+    border-color: #90d600;
+    font-size: 19px;
+    width: 90px;
+    height: 48px;
+}
+
+.home-hero__text {
+    margin-top: 1.5rem;
+    font-size: 1.3em;
+}
+
+.home-hero__text a {
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1em;
+    color: white;
+}
+
+.home-hero__text .icon {
+    background-image: url(../../../assets/bullhorn--white.svg);
+    background-size: 100%;
+    width: 28px;
+    height: 22px;
+    margin: -.25rem .25rem 0 0;
+    line-height: 14px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+@media (max-width: 767px) {
+    /* CSS goes here */
+    .logo_img .audition_select select {
+        width: 100%;
+    }
+    .logo_img h3 {
+        font-size: 25px;
+    }
+    .register_btn {
+        width: 100%;
+    }
+}

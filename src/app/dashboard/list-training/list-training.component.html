@@ -1,0 +1,137 @@
+<!-- <router-outlet>
+</router-outlet> -->
+<div class="list_header col-md-12">
+    <div>
+        <span class="" style="  color: #90d600; font-size: 21px;font-weight: initial;">Beayou.in</span>
+    </div>
+</div>
+<div class="col-md-8 col-md-offset-2">
+
+
+    <form [formGroup]="firstFormGroup" style="text-align:center;" (submit)="auth_user()">
+
+        <div class="col-md-12 ">
+            <div class="col-md-12 text-center" style="padding-bottom:2%">
+                <h1 class="txt-center list_job">List an Training - free</h1>
+                <p class="txt-center mb3">It's free to list your training or job. We're not an agency and we don't charge a commission.</p>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <mat-form-field style="width:100%">
+                    <input matInput placeholder="Institute Name" formControlName="institute_name" required>
+                </mat-form-field>
+                <div *ngIf="firstFormGroup.controls['institute_name'].errors &&  (firstFormGroup.controls['institute_name'].dirty || firstFormGroup.controls['institute_name'].touched)">
+
+                    <div style="text-align:left;" class="error_color" *ngIf="firstFormGroup.controls['institute_name'].errors.required">
+                        Institute Name is required.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <mat-form-field style="width:100%">
+                    <input matInput placeholder="Email" formControlName="emailCtrl" required>
+                </mat-form-field>
+                <div *ngIf="firstFormGroup.controls['emailCtrl'].errors &&  (firstFormGroup.controls['emailCtrl'].dirty || firstFormGroup.controls['emailCtrl'].touched)">
+
+                    <div style="text-align:left;" class="error_color" *ngIf="firstFormGroup.controls['emailCtrl'].errors.required">
+                        Email ID is required.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <mat-form-field style="width:100%">
+                    <input matInput placeholder="Contact NO" maxlength="10" formControlName="numberCtrl" required>
+                </mat-form-field>
+                <div *ngIf="firstFormGroup.controls['numberCtrl'].errors &&  (firstFormGroup.controls['numberCtrl'].dirty || firstFormGroup.controls['numberCtrl'].touched)">
+
+                    <div style="text-align:left;" class="error_color" *ngIf="firstFormGroup.controls['numberCtrl'].errors.required">
+                        Phone Number is required.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <mat-form-field style="width:100%">
+                    <input matInput placeholder="Courses Offered" formControlName="courseCtrl" required>
+                </mat-form-field>
+                <div *ngIf="firstFormGroup.controls['courseCtrl'].errors &&  (firstFormGroup.controls['courseCtrl'].dirty || firstFormGroup.controls['courseCtrl'].touched)">
+
+                    <div style="text-align:left;" class="error_color" *ngIf="firstFormGroup.controls['courseCtrl'].errors.required">
+                        Course Offered is required.
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-12">
+
+                <mat-form-field class="form-filed">
+                    <mat-select placeholder="Choose a State" formControlName="stateCtrl" name="state">
+
+                        <mat-option *ngFor="let state of states" [value]="state.code">
+                            {{state.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <!-- <div *ngIf="firstFormGroup.controls['stateCtrl'].errors &&  (firstFormGroup.controls['stateCtrl'].dirty || firstFormGroup.controls['stateCtrl'].touched)">
+
+                    <div  style="text-align:left;" class="error_color" *ngIf="firstFormGroup.controls['stateCtrl'].errors.required">
+                        Please Select State
+                    </div>
+                </div> -->
+
+            </div>
+            <div class="col-md-12">
+
+                <mat-form-field class="form-filed">
+                    <mat-select placeholder="Choose a category..." formControlName="categoryCtrl" name="food">
+
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <!-- <div *ngIf="firstFormGroup.controls['categoryCtrl'].errors &&  (firstFormGroup.controls['categoryCtrl'].dirty || firstFormGroup.controls['categoryCtrl'].touched)">
+
+                    <div style="text-align:left;" class="error_color" *ngIf="firstFormGroup.controls['categoryCtrl'].errors.required">
+                        Please Select Category
+                    </div>
+                </div> -->
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <mat-form-field style="width:100%" class="example-full-width">
+                    <textarea matInput placeholder="Course/Training  Details(example- course related information )" formControlName="detailsCtrl" maxlength="500"></textarea>
+                </mat-form-field>
+            </div>
+            <!-- <div class="col-md-12">
+
+                <mat-form-field class="form-filed">
+                    <mat-select placeholder="Choose a subcategory..." formControlName="subcategoryCtrl" name="food">
+
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div> -->
+
+        </div>
+        <div style="
+        padding-bottom: 5%;">
+            <button type="submit" class="btn btn-primary register_btn" [disabled]="!firstFormGroup.valid">Submit</button>
+
+        </div>
+    </form>
+    <!-- 
+    <form [formGroup]="secondFormGroup">
+
+        <mat-form-field>
+            <input matInput placeholder="Address" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+            <button mat-button>Back</button>
+            <button mat-button>Next</button>
+        </div>
+    </form> -->
+
+
+
+</div>

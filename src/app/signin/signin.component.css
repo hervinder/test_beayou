@@ -1,0 +1,86 @@
+.login_outer {
+    padding-top: 20%
+}
+
+.login_outer .login_inner {
+    padding: 15px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    background: white;
+}
+
+.login_outer .login_inner .login_title {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.login_outer .login_inner .login_title label {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.login_outer .login_inner .login_userid {
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.login_outer .login_inner .login_password {
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.login_outer .login_inner label {
+    color: #90d600;
+    font-weight: 300;
+}
+
+.login_outer .login_inner .login_submit {
+    text-align: center;
+    padding-top: 39px;
+    padding-bottom: 15px;
+}
+
+.login_outer .login_inner .login_submit .register_btn {
+    background-color: #90d600;
+    border-color: #90d600;
+    font-size: 20px;
+}
+
+.login_checkbox {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.login_bottom_title {
+    font-family: "Open Sans", Trebuchet, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0.3px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.login_bottom_title a {
+    border-bottom: none;
+    color: #09c;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1em;
+    padding-left: 12px;
+}
+
+.sign_member {
+    padding: 10px;
+    padding-top: 30px;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+.error_color {
+    color: red;
+    font-size: 11px;
+}

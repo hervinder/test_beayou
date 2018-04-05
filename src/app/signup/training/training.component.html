@@ -1,0 +1,128 @@
+<div class="row" style="margin-left: 0px; margin-right: 0px;">
+    <div class="col-md-12 hidden-sm hidden-xs header_top">
+        <div class="">
+            <span class="" [routerLink]="['/']" style="  color: #90d600; font-size: 21px;font-weight: initial;">Beayou.in</span>
+
+
+        </div>
+
+    </div>
+</div>
+<div class="container" style="">
+    <div class="row">
+        <div class="col-md-12 register_label">
+            <h1>Register free to find talent</h1>
+        </div>
+        <div class="col-md-12">
+            <h6 style="margin-top: 0">Already a member? <a>Sign In</a></h6>
+        </div>
+    </div>
+
+
+    <div class="contianer outer-border">
+        <div class="row">
+            <!--<div class="col-md-12">
+      <label>Register Free</label>
+  </div>-->
+            <div class="col-md-12">
+                <form novalidate [formGroup]="myForm" (submit)="addTrainee()">
+
+                    <div class="row form-group inner_border">
+                        <div class="col-md-4">
+                            <label for="InputFirstName">First Name</label>
+                            <input type="text" maxlength="20" class="form-control" id="InputFirstName" formControlName="firstName" placeholder="First Name">
+                            <div *ngIf="myForm.controls['firstName'].errors &&  (myForm.controls['firstName'].dirty || myForm.controls['firstName'].touched)">
+
+                                <div class="error_color" *ngIf="myForm.controls['firstName'].errors.required">
+                                    FirstName is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="InputLastName">Last Name</label>
+                            <input maxlength="20" type="text" class="form-control" id="InputLastName" formControlName="lastName" placeholder="Last Name">
+                            <div *ngIf="myForm.controls['lastName'].errors &&  (myForm.controls['lastName'].dirty || myForm.controls['lastName'].touched)">
+
+                                <div class="error_color" *ngIf="myForm.controls['lastName'].errors.required">
+                                    LastName is required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group inner_border">
+                        <div class="col-md-8">
+                            <label for="InputEmail1">Email address</label>
+                            <input maxlength="50" type="email" class="form-control" id="InputEmail1" formControlName="email" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <div *ngIf="myForm.controls['email'].errors &&  (myForm.controls['email'].dirty || myForm.controls['email'].touched)">
+                                <!-- <div class="error_color" *ngIf="myForm.controls['email'].errors.required">
+                                    Email is required.
+                                </div> -->
+                                <div class="error_color" *ngIf="myForm.controls['email'].errors.email">
+                                    Please Enter the valid Email ID
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row form-group inner_border">
+                        <div class="col-md-8">
+                            <label for="InputPassword1">Password</label>
+                            <input maxlength="50" type="password" class="form-control" id="InputPassword1" formControlName="password" placeholder="Password">
+                            <div *ngIf="myForm.controls['password'].errors &&  (myForm.controls['password'].dirty || myForm.controls['password'].touched)">
+
+                                <div class="error_color" *ngIf="myForm.controls['password'].errors.required">
+                                    Password is required.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row form-group inner_border">
+                        <div class="col-md-8">
+                            <label for="InputCompanyName">Training Institute  Name(optional)</label>
+                            <input maxlength="30" type="text" class="form-control" id="InputTrainingName" formControlName="trainingName" placeholder="Training Institute Name">
+                        </div>
+
+                    </div>
+                    <div class="row form-group inner_border">
+                        <div class="col-md-8">
+                            <label for="InputCompanyName">Training Institute Website(optional)</label>
+                            <input maxlength="30" type="text" class="form-control" id="InputCompanyName" formControlName="trainingWebsite" placeholder="https://">
+                        </div>
+
+                    </div>
+                    <div class="row form-group inner_border">
+                        <div class="col-md-8">
+                            <label for="Select_State">Select State</label>
+                            <select class="form-control" formControlName="state">
+                                    <option disabled   [selected]='true' value="">Select</option>
+                       <option  *ngFor="let state of states" [value]="state.code">
+                            {{state.name}}
+                        </option> 
+                      
+                   </select>
+                            <div *ngIf="myForm.controls['state'].errors &&  (myForm.controls['state'].dirty || myForm.controls['state'].touched)">
+
+                                <div class="error_color" *ngIf="myForm.controls['state'].errors.required">
+                                    Please Select State
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row form-group ">
+                        <div class="col-md-4">
+
+                        </div>
+                        <div class="col-md-4" style="text-align: center;">
+                            <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary register_btn">Submit</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+<div class="row" style="margin-left: 0px; margin-right: 0px;">
+    <div class="col-md-12 hidden-sm hidden-xs header_top">
+        <div class="">
+            <span class="" [routerLink]="['/']" style="  color: #90d600; font-size: 21px;font-weight: initial;">Beayou.in</span>
+
+
+        </div>
+
+    </div>
+</div>
+<div class="container" style="">
+    <div class="row">
+        <div class="col-md-12 register_label">
+            <h1>Register free to find talent</h1>
+        </div>
+        <div class="col-md-12">
+            <h6 style="margin-top: 0">Already a member? <a>Sign In</a></h6>
+        </div>
+    </div>
+
+
+    <div class="contianer outer-border">
+        <div class="row">
+            <!--<div class="col-md-12">
+        <label>Register Free</label>
+    </div>-->
+            <div class="col-md-12">
+                <form (submit)="addUser()">
+
+                    <div class="row form-group inner_border">
+                        <div class="col-md-4">
+                            <label for="InputFirstName">First Name</label>
+                            <input type="text" class="form-control" id="InputFirstName" [(ngModel)]="model.firstName" name="firstName" placeholder="First Name">
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="InputLastName">Last Name</label>
+                            <input type="text" class="form-control" id="InputLastName" [(ngModel)]="model.lastName" name="lastName" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="row form-group inner_border">
+                        <div class="col-md-8">
+                            <label for="InputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="InputEmail1" [(ngModel)]="model.email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+
+                    </div>
+                    <div class="row form-group inner_border">
+                        <div class="col-md-8">
+                            <label for="InputPassword1">Password</label>
+                            <input type="password" class="form-control" id="InputPassword1" [(ngModel)]="model.password" name="password" placeholder="Password">
+                        </div>
+
+                    </div>
+                    <div class="row form-group inner_border">
+                        <div class="col-md-8">
+                            <label for="InputCompanyName">Company Name(optional)</label>
+                            <input type="text" class="form-control" id="InputCompanyName" [(ngModel)]="model.companyName" name="companyName" placeholder="Company Name">
+                        </div>
+
+                    </div>
+                    <div class="row form-group inner_border">
+                        <div class="col-md-8">
+                            <label for="InputCompanyName">Company Website(optional)</label>
+                            <input type="text" class="form-control" id="InputCompanyName" [(ngModel)]="model.companyWebsite" name="companyWebsite" placeholder="https://">
+                        </div>
+
+                    </div>
+                    <div class="row form-group inner_border">
+                        <div class="col-md-8">
+                            <label for="Select_State">Select State</label>
+                            <select [(ngModel)]="model.state" name="state" class="form-control" id="Select_State">
+                         <option>Haryana</option>
+                         <option>Delhi</option>
+                         <option>Punjab</option>
+                         <option>Himachal</option>
+                         <option>Jammu & Kashmir</option>
+                     </select>
+                        </div>
+                    </div>
+                    <div class="row form-group ">
+                        <div class="col-md-4">
+
+                        </div>
+                        <div class="col-md-4" style="text-align: center;">
+                            <button type="submit" class="btn btn-primary register_btn">Submit</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
